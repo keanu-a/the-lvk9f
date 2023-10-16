@@ -1,10 +1,12 @@
-import "./App.css";
+import { Outlet } from "react-router-dom";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
-    <>
-      <div>The Las Vegas K-9 Foundation</div>
-    </>
+    <div className="max-w-[1200px] mx-auto">
+      <Navbar />
+      <Outlet />
+    </div>
   );
 }
 
