@@ -10,7 +10,11 @@ export default {
       "main-gray": "#EDEDED",
       "main-white": "#ffffff",
     },
-    extend: {},
+    extend: {
+      backgroundImage: {
+        hero: "url('/src/assets/hero.jpg')",
+      },
+    },
   },
   plugins: [],
 };
