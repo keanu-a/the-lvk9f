@@ -34,7 +34,7 @@ const getInvolvedLinks: navText[] = [
 
 export default function Footer() {
   return (
-    <footer className="max-w-7xl h-[18rem] flex flex-col justify-between mx-auto mt-4">
+    <footer className="max-w-7xl h-[18rem] flex flex-col justify-between mx-auto border-t-[6px] border-main-blue">
       <div className="flex justify-around px-8 items-center">
         <Link to="/">
           <img src={logo} width={150} alt="The Las Vegas K-9 Foundation logo" />

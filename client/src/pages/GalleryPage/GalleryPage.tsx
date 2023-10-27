@@ -1,9 +1,15 @@
+import Footer from "../../components/Footer";
+
 export default function GalleryPage() {
   return (
     <main>
-      <h2>Gallery</h2>
+      <div className="h-screen flex flex-col items-center">
+        <h2>Gallery</h2>
 
-      <p>Coming Soon</p>
+        <p>Coming Soon</p>
+      </div>
+
+      <Footer />
     </main>
   );
 }
