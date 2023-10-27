@@ -7,6 +7,7 @@ export default {
       "secondary-blue": "#88d5f3",
       "main-yellow": "#f5d190",
       "main-red": "#f6b5a3",
+      "secondary-red": "#A35F4D",
       "main-gray": "#EDEDED",
       "main-white": "#ffffff",
     },
