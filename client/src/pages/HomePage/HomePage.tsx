@@ -1,13 +1,28 @@
 import { Link } from "react-router-dom";
 
-import HeroSection from "./components/HeroSection";
+// import HeroSection from "./components/HeroSection";
 import Footer from "../../components/Footer";
 
 import dog1 from "../../assets/dog1.jpg";
 import dog2 from "../../assets/dog2.jpg";
+import dogSlideshow1 from "../../assets/hero1.jpg";
+import dogSlideshow2 from "../../assets/hero2.jpg";
 
 import phone from "../../assets/icons8-phone-50.png";
 import email from "../../assets/icons8-email-50.png";
+import Slideshow from "../../components/Slideshow";
+import ColorContainer from "../../components/ColorContainer";
+
+const SLIDESHOW_IMAGE_FILES = [
+  {
+    image: dogSlideshow1,
+    alt: "Man walking his 5 dogs outside",
+  },
+  {
+    image: dogSlideshow2,
+    alt: "A shiba running in a desert",
+  },
+];
 
 const images = [
   {
@@ -23,20 +38,39 @@ const images = [
 export default function HomePage() {
   return (
     <>
-      <HeroSection />
+      <section
+        className="flex relative items-center h-[70vh] overflow-hidden             
+            before:content-['']
+            before:absolute
+            before:inset-0
+            before:block
+            before:bg-gradient-to-r
+            before:from-main-blue"
+      >
+        <h1 className="w-2/5 text-main-white p-4 absolute">
+          The Las Vegas K-9 Foundation
+        </h1>
 
-      <section className="h-[18rem] flex flex-col justify-center gap-8">
-        <h2 className="text-center">Our Mission</h2>
-        <p className="text-center p-4">
-          Provide a venue for educational experiences for owners and their
-          canine companions, advancing amateur dog sports competitions.
-        </p>
+        <Slideshow
+          imageNames={SLIDESHOW_IMAGE_FILES}
+          buttonColor={"bg-main-white"}
+        />
+      </section>
+
+      <section className="h-[18rem] my-8">
+        <ColorContainer bgColor="bg-main-blue">
+          <h2 className="text-center">Our Mission</h2>
+          <p className="text-center p-4">
+            Provide a venue for educational experiences for owners and their
+            canine companions, advancing amateur dog sports competitions.
+          </p>
+        </ColorContainer>
       </section>
 
       <section className="flex justify-center items-center h-[40rem] bg-main-gray overflow-hidden">
         <div className="w-1/2 flex p-4 align-middle justify-center">
-          {images.map(({ image, alt }) => (
-            <div className="object-cover w-1/2 m-1 shadow-md">
+          {images.map(({ image, alt }, index) => (
+            <div key={index} className="object-cover w-1/2 m-1 shadow-md">
               <img src={image} alt={alt} />
             </div>
           ))}
