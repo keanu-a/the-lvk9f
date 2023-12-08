@@ -4,6 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .donate-btn {
+    @apply text-main-white bg-main-blue hover:text-main-blue hover:bg-main-gray hover:shadow-shift-left-main hover:shadow-main-blue px-4 py-2 rounded-lg;
+  }
+}
+
 :root {
   font-family: Lato, system-ui, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -17,10 +23,6 @@
 h1 {
   font-size: 5.2rem;
   font-weight: 400;
-}
-
-h2 {
-  font-size: 3rem;
 }
 
 h3 {

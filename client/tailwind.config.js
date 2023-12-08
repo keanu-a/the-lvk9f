@@ -1,3 +1,5 @@
+import plugin from "tailwindcss/plugin";
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -12,10 +14,33 @@ export default {
       "main-white": "#ffffff",
     },
     extend: {
-      backgroundImage: {
-        hero: "url('/src/assets/hero.jpg')",
+      boxShadow: {
+        "shift-left-main": "4px 4px 0 0 #6596f5",
+        "shift-right-main": "-4px 4px 0 0 #6596f5",
+        "shift-left-secondary": "4px 4px 0 0 #88d5f3",
+        "shift-right-secondary": "-4px 4px 0 0 #88d5f3",
+        "shift-left-yellow": "4px 4px 0 0 #f5d190",
+        "shift-right-yellow": "-4px 4px 0 0 #f5d190",
+        "shift-left-red": "4px 4px 0 0 #f6b5a3",
+        "shift-right-red": "-4px 4px 0 0 #f6b5a3",
+      },
+      textShadow: {
+        sm: "0 1px 2px var(--tw-shadow-color)",
+        DEFAULT: "0 2px 4px var(--tw-shadow-color)",
+        lg: "1px 1px 0px var(--tw-shadow-color)",
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ matchUtilities, theme }) {
+      matchUtilities(
+        {
+          "text-shadow": (value) => ({
+            textShadow: value,
+          }),
+        },
+        { values: theme("textShadow") }
+      );
+    }),
+  ],
 };
