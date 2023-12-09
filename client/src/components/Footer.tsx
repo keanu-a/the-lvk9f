@@ -36,7 +36,7 @@ const contactInformation: string[] = [
 export default function Footer() {
   return (
     <footer className="bg-main-blue">
-      <div className="max-w-4xl flex flex-col mx-auto gap-4 justify-center items-center py-4 sm:flex-row sm:justify-around">
+      <div className="max-w-5xl flex flex-col mx-auto gap-4 justify-center items-center py-4 sm:flex-row sm:justify-around">
         <Link to="/">
           <img
             src={logo}
