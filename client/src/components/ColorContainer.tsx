@@ -1,8 +1,9 @@
 type Props = {
   children: React.ReactNode;
   bgColor?: string;
-  width?: "full" | "half";
+  width?: "full" | "half" | "fit";
   shift?: "right" | "left";
+  shadowColor?: "main" | "secondary" | "yellow" | "red";
 };
 
 export default function ColorContainer({
@@ -10,21 +11,24 @@ export default function ColorContainer({
   bgColor,
   width = "full",
   shift = "right",
+  shadowColor = "main",
 }: Props) {
+  const getShadowClass = () => {
+    if (shift === "right") return `shadow-shift-right-${shadowColor}`;
+    if (shift === "left") return `shadow-shift-left-${shadowColor}`;
+    return "";
+  };
+
   return (
     <div
-      className={`${
-        width === "full" ? "max-w-6xl" : "w-1/2"
-      } h-full flex flex-col justify-center mx-auto relative rounded-md ${bgColor}`}
+      className={`rounded-lg h-full justify-center text-center relative 
+        ${bgColor} 
+        ${width === "full" && "max-w-6xl"}
+        ${getShadowClass()}`}
     >
-      {/* This is the white overlay - Over the blue background */}
-      <div
-        className={`absolute bg-main-white w-full h-full ${
-          shift === "right" ? "ml-4" : "mr-4"
-        } mt-4 shadow-lg rounded-md`}
-      ></div>
-
-      <div className="relative z-1">{children}</div>
+      <div className="h-full relative z-1 p-8 flex flex-col gap-4 justify-center text-center">
+        {children}
+      </div>
     </div>
   );
 }

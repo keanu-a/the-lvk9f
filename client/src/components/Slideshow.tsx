@@ -42,7 +42,7 @@ export default function Slideshow({
   };
 
   return (
-    <div className="flex flex-col items-center gap-1">
+    <div className="flex justify-center overflow-hidden">
       {/* Slideshow images */}
       <ul className="list-none p-0 w-full">
         {imageNames.map(({ image, alt }, index) => (
@@ -50,11 +50,11 @@ export default function Slideshow({
             key={index}
             className={
               type === "landscape"
-                ? `flex justify-end ${!isCurrentSlide(index) && "hidden"}`
+                ? `${!isCurrentSlide(index) && "hidden"}`
                 : "h-50"
             }
           >
-            <img src={image} alt={alt} className="w-full h-auto object-cover" />
+            <img src={image} alt={alt} className="h-full object-fit" />
           </li>
         ))}
       </ul>
@@ -64,7 +64,7 @@ export default function Slideshow({
         {imageNames.map((_, index) => (
           <li key={index}>
             <button
-              className={`w-3 h-3 rounded-full ${
+              className={`w-1 h-1 md:w-2 md:h-2 rounded-full ${
                 isCurrentSlide(index)
                   ? "opacity-1"
                   : "opacity-50 hover:bg-main-red"

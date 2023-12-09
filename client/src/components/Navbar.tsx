@@ -10,7 +10,6 @@ interface navText {
 }
 
 const navLinkText: navText[] = [
-  { to: "/about-us", text: "About Us" },
   {
     to: "/events",
     text: "Events",
@@ -33,22 +32,26 @@ export default function Navbar() {
   const [toggleMenu, setToggleMenu] = useState(false);
 
   return (
-    <nav className="flex justify-between items-center px-4 lg:px-12 border-b-[6px] border-main-blue relative">
+    <nav className="flex justify-between items-center pr-4 sm:px-4 lg:px-12 border-b-4 border-main-blue relative">
       <NavLink to="/">
-        <img src={logo} width={150} alt="The Las Vegas K-9 Foundation logo" />
+        <img
+          src={logo}
+          className="w-[4.5rem]"
+          alt="The Las Vegas K-9 Foundation logo"
+        />
       </NavLink>
 
       <button
-        className="lg:hidden hover:text-main-blue h-fit"
+        className="md:hidden hover:text-main-blue h-fit"
         onClick={() => setToggleMenu((prev) => !prev)}
       >
-        {toggleMenu ? <X size={32} /> : <List size={32} />}
+        {toggleMenu ? <X className="w-6 h-6" /> : <List className="w-6 h-6" />}
       </button>
 
       {/* Menu Nav Bar */}
       <ul
-        className={`flex flex-col gap-8 p-8 w-full text-center absolute z-20 top-full right-0 
-                    shadow-lg rounded-b-lg bg-main-white lg:hidden ${
+        className={`flex flex-col gap-4 p-8 w-full text-center absolute z-20 top-full right-0 
+                    shadow-lg rounded-b-lg bg-main-white md:hidden ${
                       !toggleMenu && "hidden"
                     }`}
       >
@@ -56,10 +59,9 @@ export default function Navbar() {
           <li key={index}>
             <NavLink
               to={to}
-              className={`text-xl font-medium ${
-                text === "Donate"
-                  ? "transition bg-main-blue hover:text-main-white p-4 rounded-lg"
-                  : "hover:text-main-blue"
+              onClick={() => setToggleMenu(false)}
+              className={`transition text-sm font-medium  ${
+                text === "Donate" ? "donate-btn" : "hover:text-main-blue"
               }`}
             >
               {text}
@@ -69,15 +71,13 @@ export default function Navbar() {
       </ul>
 
       {/* Regular Nav Bar */}
-      <ul className="gap-12 justify-around items-center hidden lg:flex lg:flex-row">
+      <ul className="gap-12 justify-around items-center hidden md:flex md:flex-row">
         {navLinkText.map(({ to, text }, index) => (
           <li key={index}>
             <NavLink
               to={to}
-              className={`text-xl font-medium ${
-                text === "Donate"
-                  ? "transition bg-main-blue hover:text-main-white p-3 rounded-lg"
-                  : "hover:text-main-blue"
+              className={`transition text-xs font-medium ${
+                text === "Donate" ? "donate-btn" : "hover:text-main-blue"
               }`}
             >
               {text}
