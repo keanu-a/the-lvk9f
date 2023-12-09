@@ -1,8 +1,5 @@
 import { Link } from "react-router-dom";
 import logo from "../assets/final-multi.jpg";
-import linkedIn from "../assets/icons8-linkedin-48.png";
-import facebook from "../assets/icons8-facebook-48.png";
-import youtube from "../assets/icons8-youtube-48.png";
 
 interface navText {
   to: string;
@@ -10,7 +7,6 @@ interface navText {
 }
 
 const companyLinks: navText[] = [
-  { to: "/about-us", text: "About Us" },
   {
     to: "/events",
     text: "Events",
@@ -32,54 +28,74 @@ const getInvolvedLinks: navText[] = [
   },
 ];
 
+const contactInformation: string[] = [
+  "+1 (702) 123-1234",
+  "testemail@gmail.com",
+];
+
 export default function Footer() {
   return (
-    <footer className="max-w-7xl h-[18rem] flex flex-col justify-between mx-auto border-t-[6px] border-main-blue">
-      <div className="flex justify-around px-8 items-center">
+    <footer className="bg-main-blue">
+      <div className="max-w-4xl flex flex-col mx-auto gap-4 justify-center items-center py-4 sm:flex-row sm:justify-around">
         <Link to="/">
-          <img src={logo} width={150} alt="The Las Vegas K-9 Foundation logo" />
+          <img
+            src={logo}
+            alt="The Las Vegas K-9 Foundation logo"
+            className="rounded-full w-2/5 mx-auto sm:w-32"
+          />
         </Link>
 
-        <div className="flex gap-16">
+        <div className="grid grid-cols-1 text-center sm:text-left sm:grid-cols-3 gap-4">
           <div>
-            <h3>Company</h3>
-            <ul>
+            <h2 className="text-lg font-bold">Organization</h2>
+            <ul className="flex flex-col gap-1">
               {companyLinks.map(({ to, text }, index) => (
                 <li key={index}>
-                  <Link to={to}>{text}</Link>
+                  <Link
+                    to={to}
+                    className="text-sm hover:text-main-white transition"
+                  >
+                    {text}
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
 
           <div>
-            <h3>Get Involved</h3>
-            <ul>
+            <h2 className="text-lg font-bold">Get Involved</h2>
+            <ul className="flex flex-col gap-1">
               {getInvolvedLinks.map(({ to, text }, index) => (
                 <li key={index}>
-                  <Link to={to}>{text}</Link>
+                  <Link
+                    to={to}
+                    className="text-sm hover:text-main-white transition"
+                  >
+                    {text}
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
-        </div>
 
-        <div className="flex">
-          <a href="/">
-            <img src={linkedIn} width={30} />
-          </a>
-          <a href="/">
-            <img src={facebook} width={30} />
-          </a>
-          <a href="/">
-            <img src={youtube} width={30} />
-          </a>
+          <div>
+            <h2 className="text-lg font-bold">Contact Us</h2>
+            <ul className="flex flex-col gap-1">
+              {contactInformation.map((info, index) => (
+                <li key={index} className="text-sm">
+                  {info}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
 
-      <div className="flex justify-between p-1">
-        <h4>&copy; 2023 The Las Vegas K-9 Foundation. All Rights Reserved.</h4>
-        <h4>Las Vegas</h4>
+      <div className="bg-main-yellow flex text-center justify-center p-4 sm:p-2">
+        <p className="text-xs">
+          Copyright &copy; 2023 The Las Vegas K-9 Foundation. All Rights
+          Reserved.
+        </p>
       </div>
     </footer>
   );

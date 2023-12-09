@@ -6,12 +6,17 @@ export default {
   theme: {
     colors: {
       "main-blue": "#6596f5",
+      "main-blue-darker": "#1961F0",
       "secondary-blue": "#88d5f3",
       "main-yellow": "#f5d190",
       "main-red": "#f6b5a3",
+      "main-orange": "#F6C39A",
+      "main-purple": "#AEA6CC",
       "secondary-red": "#A35F4D",
       "main-gray": "#EDEDED",
+      "secondary-gray": "#5C5C5C",
       "main-white": "#ffffff",
+      "main-black": "#141414 ",
     },
     extend: {
       boxShadow: {
@@ -27,7 +32,7 @@ export default {
       textShadow: {
         sm: "0 1px 2px var(--tw-shadow-color)",
         DEFAULT: "0 2px 4px var(--tw-shadow-color)",
-        lg: "1px 1px 0px var(--tw-shadow-color)",
+        lg: "1px 1px 0 var(--tw-shadow-color)",
       },
     },
   },

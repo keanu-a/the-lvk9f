@@ -10,7 +10,6 @@ interface navText {
 }
 
 const navLinkText: navText[] = [
-  { to: "/about-us", text: "About Us" },
   {
     to: "/events",
     text: "Events",
@@ -37,7 +36,7 @@ export default function Navbar() {
       <NavLink to="/">
         <img
           src={logo}
-          className="w-[5.5rem] md:w-24"
+          className="w-[4.5rem]"
           alt="The Las Vegas K-9 Foundation logo"
         />
       </NavLink>
@@ -51,7 +50,7 @@ export default function Navbar() {
 
       {/* Menu Nav Bar */}
       <ul
-        className={`flex flex-col gap-8 p-8 w-full text-center absolute z-20 top-full right-0 
+        className={`flex flex-col gap-4 p-8 w-full text-center absolute z-20 top-full right-0 
                     shadow-lg rounded-b-lg bg-main-white md:hidden ${
                       !toggleMenu && "hidden"
                     }`}
@@ -60,6 +59,7 @@ export default function Navbar() {
           <li key={index}>
             <NavLink
               to={to}
+              onClick={() => setToggleMenu(false)}
               className={`transition text-sm font-medium  ${
                 text === "Donate" ? "donate-btn" : "hover:text-main-blue"
               }`}
@@ -76,7 +76,7 @@ export default function Navbar() {
           <li key={index}>
             <NavLink
               to={to}
-              className={`transition text-sm font-medium ${
+              className={`transition text-xs font-medium ${
                 text === "Donate" ? "donate-btn" : "hover:text-main-blue"
               }`}
             >
