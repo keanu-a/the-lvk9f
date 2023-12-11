@@ -47,13 +47,13 @@ export default function Footer() {
 
         <div className="grid grid-cols-1 text-center sm:text-left sm:grid-cols-3 gap-4">
           <div>
-            <h2 className="text-lg font-bold">Organization</h2>
+            <h2 className="text-md font-bold">Organization</h2>
             <ul className="flex flex-col gap-1">
               {companyLinks.map(({ to, text }, index) => (
                 <li key={index}>
                   <Link
                     to={to}
-                    className="text-sm hover:text-main-white transition"
+                    className="text-xs hover:text-main-white transition"
                   >
                     {text}
                   </Link>
@@ -63,13 +63,13 @@ export default function Footer() {
           </div>
 
           <div>
-            <h2 className="text-lg font-bold">Get Involved</h2>
+            <h2 className="text-md font-bold">Get Involved</h2>
             <ul className="flex flex-col gap-1">
               {getInvolvedLinks.map(({ to, text }, index) => (
                 <li key={index}>
                   <Link
                     to={to}
-                    className="text-sm hover:text-main-white transition"
+                    className="text-xs hover:text-main-white transition"
                   >
                     {text}
                   </Link>
@@ -79,10 +79,10 @@ export default function Footer() {
           </div>
 
           <div>
-            <h2 className="text-lg font-bold">Contact Us</h2>
+            <h2 className="text-md font-bold">Contact Us</h2>
             <ul className="flex flex-col gap-1">
               {contactInformation.map((info, index) => (
-                <li key={index} className="text-sm">
+                <li key={index} className="text-xs">
                   {info}
                 </li>
               ))}
