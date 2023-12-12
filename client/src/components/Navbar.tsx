@@ -36,7 +36,7 @@ export default function Navbar() {
       <NavLink to="/">
         <img
           src={logo}
-          className="w-[4.5rem]"
+          className="w-24 sm:w-32"
           alt="The Las Vegas K-9 Foundation logo"
         />
       </NavLink>
@@ -60,7 +60,7 @@ export default function Navbar() {
             <NavLink
               to={to}
               onClick={() => setToggleMenu(false)}
-              className={`transition text-sm font-medium  ${
+              className={`transition text-md font-medium  ${
                 text === "Donate" ? "donate-btn" : "hover:text-main-blue"
               }`}
             >
@@ -76,7 +76,7 @@ export default function Navbar() {
           <li key={index}>
             <NavLink
               to={to}
-              className={`transition text-xs font-medium ${
+              className={`transition text-xl font-medium ${
                 text === "Donate" ? "donate-btn" : "hover:text-main-blue"
               }`}
             >
