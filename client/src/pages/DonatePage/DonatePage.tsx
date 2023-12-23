@@ -7,14 +7,10 @@ export default function DonatePage() {
 
       <p className="text-xs sm:text-lg">
         The donation link down below will lead you to a secure third party
-        service.
-      </p>
-
-      <p className="text-xs sm:text-lg">
-        Powered by Stripe: Your payment is securely processed via Stripe, a
-        trusted payment service provider. Stripe accepts credit cards, digital
-        wallets, and various payment methods, ensuring a secure and seamless
-        donation experience.
+        service, Stripe. Powered by Stripe: Your payment is securely processed
+        via Stripe, a trusted payment service provider. Stripe accepts credit
+        cards, digital wallets, and various payment methods, ensuring a secure
+        and seamless donation experience.
       </p>
 
       <Link
