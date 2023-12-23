@@ -64,7 +64,7 @@ export default function Slideshow({
         {imageNames.map((_, index) => (
           <li key={index}>
             <button
-              className={`w-1 h-1 md:w-2 md:h-2 rounded-full ${
+              className={`w-2 h-2 rounded-full ${
                 isCurrentSlide(index)
                   ? "opacity-1"
                   : "opacity-50 hover:bg-main-red"

@@ -10,7 +10,7 @@
   }
 
   .btn-red {
-    @apply transition text-main-black bg-main-red hover:text-main-white hover:bg-secondary-red hover:shadow-shift-left-main hover:shadow-main-red px-4 py-1 rounded-lg;
+    @apply transition text-main-black bg-main-red hover:text-main-white hover:bg-secondary-red hover:shadow-shift-left-main hover:shadow-main-red px-4 py-2 rounded-lg;
   }
 }
 
@@ -27,6 +27,10 @@
 h1 {
   font-size: 5.2rem;
   font-weight: 400;
+}
+
+h2 {
+  font-size: 1.8rem;
 }
 
 h3 {

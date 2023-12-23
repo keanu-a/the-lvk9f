@@ -36,7 +36,7 @@ const contactInformation: string[] = [
 export default function Footer() {
   return (
     <footer className="bg-main-blue">
-      <div className="max-w-5xl flex flex-col mx-auto gap-4 justify-center items-center py-4 sm:flex-row sm:justify-around">
+      <div className="max-w-7xl flex flex-col mx-auto gap-4 justify-center items-center py-12 sm:flex-row sm:justify-around">
         <Link to="/">
           <img
             src={logo}
@@ -45,15 +45,15 @@ export default function Footer() {
           />
         </Link>
 
-        <div className="grid grid-cols-1 text-center sm:text-left sm:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 text-center sm:text-left sm:grid-cols-3 gap-8">
           <div>
-            <h2 className="text-lg font-bold">Organization</h2>
-            <ul className="flex flex-col gap-1">
+            <h2 className="text-md font-bold text-xl">Organization</h2>
+            <ul className="flex flex-col gap-2 mt-4">
               {companyLinks.map(({ to, text }, index) => (
                 <li key={index}>
                   <Link
                     to={to}
-                    className="text-sm hover:text-main-white transition"
+                    className="text-xs hover:text-main-white transition sm:text-base"
                   >
                     {text}
                   </Link>
@@ -63,13 +63,13 @@ export default function Footer() {
           </div>
 
           <div>
-            <h2 className="text-lg font-bold">Get Involved</h2>
-            <ul className="flex flex-col gap-1">
+            <h2 className="text-md font-bold text-xl">Get Involved</h2>
+            <ul className="flex flex-col gap-2 mt-4">
               {getInvolvedLinks.map(({ to, text }, index) => (
                 <li key={index}>
                   <Link
                     to={to}
-                    className="text-sm hover:text-main-white transition"
+                    className="text-xs hover:text-main-white transition sm:text-base"
                   >
                     {text}
                   </Link>
@@ -79,10 +79,10 @@ export default function Footer() {
           </div>
 
           <div>
-            <h2 className="text-lg font-bold">Contact Us</h2>
-            <ul className="flex flex-col gap-1">
+            <h2 className="text-md font-bold text-xl">Contact Us</h2>
+            <ul className="flex flex-col gap-2 mt-4">
               {contactInformation.map((info, index) => (
-                <li key={index} className="text-sm">
+                <li key={index} className="text-sm sm:text-base">
                   {info}
                 </li>
               ))}
@@ -92,7 +92,7 @@ export default function Footer() {
       </div>
 
       <div className="bg-main-yellow flex text-center justify-center p-4 sm:p-2">
-        <p className="text-xs">
+        <p className="text-sm">
           Copyright &copy; 2023 The Las Vegas K-9 Foundation. All Rights
           Reserved.
         </p>
