@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 export default function DonatePage() {
   return (
     <main className="max-w-4xl mx-auto flex flex-col gap-4 items-center p-2">
@@ -13,12 +11,14 @@ export default function DonatePage() {
         and seamless donation experience.
       </p>
 
-      <Link
+      <p className="btn-red">Coming Soon</p>
+
+      {/* <Link
         to="https://donate.stripe.com/test_aEU7umcMfgZPenC288"
         className="btn-red text-lg"
       >
         Donate Now
-      </Link>
+      </Link> */}
     </main>
   );
 }
