@@ -29,8 +29,8 @@ const getInvolvedLinks: navText[] = [
 ];
 
 const contactInformation: string[] = [
-  "+1 (702) 123-1234",
-  "testemail@gmail.com",
+  "702-608-7178",
+  "info@lasvegask9foundation.org",
 ];
 
 export default function Footer() {

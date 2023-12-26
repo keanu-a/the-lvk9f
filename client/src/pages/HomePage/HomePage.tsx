@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 // import HeroSection from "./components/HeroSection";
 import Footer from "../../components/Footer";
 
-import dog1 from "../../assets/dog1.jpg";
+import dog3 from "../../assets/dog3.jpg";
 import dog2 from "../../assets/dog2.jpg";
 import dogSlideshow1 from "../../assets/hero1.jpg";
 import dogSlideshow2 from "../../assets/hero2.jpg";
@@ -23,8 +23,8 @@ const SLIDESHOW_IMAGE_FILES = [
 
 const images = [
   {
-    image: dog1,
-    alt: "Dog holding a leash",
+    image: dog3,
+    alt: "Close up shot of a dog. https://www.freepik.com/free-photo/closeup-shot-cute-sitting-golden-retriever-puppy-isolated-white-surface_16224915.htm#query=dog&position=48&from_view=search&track=sph&uuid=1d7dff89-216e-4386-895b-7dc12419479a",
   },
   {
     image: dog2,
@@ -66,7 +66,7 @@ export default function HomePage() {
       </section>
 
       <section className="h-[32rem] flex flex-col gap-4 justify-center items-center py-6 px-4 bg-main-gray overflow-hidden sm:flex-row">
-        <div className="h-1/2 flex p-4 align-middle justify-center overflow-hidden sm:w-1/2 sm:h-3/4">
+        <div className="h-1/2 flex p-4 align-middle justify-center items-center overflow-hidden sm:w-1/2 sm:h-3/4 sm:flex-col md:flex-row">
           {images.map(({ image, alt }, index) => (
             <div
               key={index}
