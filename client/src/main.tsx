@@ -7,7 +7,7 @@ import "./index.css";
 import AboutUsPage from "./pages/AboutUsPage/AboutUsPage.tsx";
 import EventsPage from "./pages/EventsPage/EventsPage.tsx";
 import GalleryPage from "./pages/GalleryPage/GalleryPage.tsx";
-import MembershipPage from "./pages/MembershipPage/MembershipPage.tsx";
+import BecomeASupporterPage from "./pages/BecomeASupporterPage/BecomeASupporterPage.tsx";
 import DonatePage from "./pages/DonatePage/DonatePage.tsx";
 import HomePage from "./pages/HomePage/HomePage.tsx";
 
@@ -38,7 +38,7 @@ const router = createBrowserRouter([
       },
       {
         path: "become-a-supporter",
-        element: <MembershipPage />,
+        element: <BecomeASupporterPage />,
       },
       {
         path: "donate",
