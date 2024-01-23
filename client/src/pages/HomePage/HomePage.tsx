@@ -1,5 +1,8 @@
 import { Link } from "react-router-dom";
 
+import { Bounce, ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 // import HeroSection from "./components/HeroSection";
 import Footer from "../../components/Footer";
 
@@ -9,6 +12,7 @@ import dogSlideshow1 from "../../assets/hero1.jpg";
 import dogSlideshow2 from "../../assets/hero2.jpg";
 
 import Slideshow from "../../components/Slideshow";
+import { useEffect } from "react";
 
 const SLIDESHOW_IMAGE_FILES = [
   {
@@ -33,8 +37,23 @@ const images = [
 ];
 
 export default function HomePage() {
+  useEffect(() => {
+    toast.info("503c(3) status pending", {
+      position: "top-center",
+      autoClose: 7000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: false,
+      progress: undefined,
+      theme: "light",
+      transition: Bounce,
+    });
+  }, []);
+
   return (
     <>
+      <ToastContainer />
       <section
         className="flex relative items-center max-h-[48rem] overflow-hidden             
                    before:absolute before:inset-0 before:block before:bg-gradient-to-r before:from-main-blue"

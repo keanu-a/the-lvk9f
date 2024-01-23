@@ -1,24 +1,45 @@
+import { useEffect } from "react";
+import { Bounce, ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 export default function DonatePage() {
+  useEffect(() => {
+    toast.info("503c(3) status pending", {
+      position: "top-center",
+      autoClose: 7000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: false,
+      progress: undefined,
+      theme: "light",
+      transition: Bounce,
+    });
+  }, []);
+
   return (
-    <main className="max-w-4xl mx-auto flex flex-col gap-4 items-center p-2">
-      <h2>Donate to The Las Vegas K-9 Foundation</h2>
+    <>
+      <ToastContainer />
+      <main className="max-w-4xl mx-auto flex flex-col gap-4 items-center p-2">
+        <h2>Donate to The Las Vegas K-9 Foundation</h2>
 
-      <p className="text-xs sm:text-lg">
-        The donation link down below will lead you to a secure third party
-        service, Stripe. Powered by Stripe: Your payment is securely processed
-        via Stripe, a trusted payment service provider. Stripe accepts credit
-        cards, digital wallets, and various payment methods, ensuring a secure
-        and seamless donation experience.
-      </p>
+        <p className="text-xs sm:text-lg">
+          The donation link down below will lead you to a secure third party
+          service, Stripe. Powered by Stripe: Your payment is securely processed
+          via Stripe, a trusted payment service provider. Stripe accepts credit
+          cards, digital wallets, and various payment methods, ensuring a secure
+          and seamless donation experience.
+        </p>
 
-      <p className="btn-red">Coming Soon</p>
+        <p className="btn-red">Coming Soon</p>
 
-      {/* <Link
+        {/* <Link
         to="https://donate.stripe.com/test_aEU7umcMfgZPenC288"
         className="btn-red text-lg"
-      >
+        >
         Donate Now
       </Link> */}
-    </main>
+      </main>
+    </>
   );
 }
