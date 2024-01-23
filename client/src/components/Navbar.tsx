@@ -11,6 +11,10 @@ interface navText {
 
 const navLinkText: navText[] = [
   {
+    to: "/about-us",
+    text: "About Us",
+  },
+  {
     to: "/events",
     text: "Events",
   },
@@ -19,8 +23,8 @@ const navLinkText: navText[] = [
     text: "Gallery",
   },
   {
-    to: "/membership",
-    text: "Membership",
+    to: "/become-a-supporter",
+    text: "Become a Supporter",
   },
   {
     to: "/donate",

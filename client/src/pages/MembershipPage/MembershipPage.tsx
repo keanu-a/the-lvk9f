@@ -9,7 +9,7 @@ export default function MembershipPage() {
   return (
     <main>
       <div className="h-screen flex flex-col items-center">
-        <h2>Membership</h2>
+        <h2>Become a Supporter</h2>
 
         <p>Coming Soon</p>
       </div>

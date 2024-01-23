@@ -53,7 +53,7 @@ export default function Footer() {
                 <li key={index}>
                   <Link
                     to={to}
-                    className="text-xs hover:text-main-white transition sm:text-base"
+                    className="text-sm hover:text-main-white transition sm:text-base"
                   >
                     {text}
                   </Link>
@@ -69,7 +69,7 @@ export default function Footer() {
                 <li key={index}>
                   <Link
                     to={to}
-                    className="text-xs hover:text-main-white transition sm:text-base"
+                    className="text-sm hover:text-main-white transition sm:text-base"
                   >
                     {text}
                   </Link>
