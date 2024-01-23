@@ -1,5 +1,8 @@
 import { Link } from "react-router-dom";
 
+import { Bounce, ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 // import HeroSection from "./components/HeroSection";
 import Footer from "../../components/Footer";
 
@@ -9,6 +12,7 @@ import dogSlideshow1 from "../../assets/hero1.jpg";
 import dogSlideshow2 from "../../assets/hero2.jpg";
 
 import Slideshow from "../../components/Slideshow";
+import { useEffect } from "react";
 
 const SLIDESHOW_IMAGE_FILES = [
   {
@@ -33,8 +37,23 @@ const images = [
 ];
 
 export default function HomePage() {
+  useEffect(() => {
+    toast.info("503c(3) status pending", {
+      position: "top-center",
+      autoClose: 7000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: false,
+      progress: undefined,
+      theme: "light",
+      transition: Bounce,
+    });
+  }, []);
+
   return (
     <>
+      <ToastContainer />
       <section
         className="flex relative items-center max-h-[48rem] overflow-hidden             
                    before:absolute before:inset-0 before:block before:bg-gradient-to-r before:from-main-blue"
@@ -81,7 +100,7 @@ export default function HomePage() {
           <h2 className="text-lg font-bold sm:text-3xl">Get Involved Today</h2>
           <p className="text-sm text-center sm:text-lg">
             We're looking for passionate canine owners that want to join our
-            mission and make Las Vegas a new hub for the dog show world.
+            mission and make Las Vegas the premier hub for canine events.
           </p>
           <Link to="/membership">
             <button className="btn-red text-sm sm:text-lg">Learn More</button>
@@ -94,8 +113,8 @@ export default function HomePage() {
           <h2 className="text-lg font-bold sm:text-3xl">Our Vision & Goals</h2>
 
           <p className="text-sm text-center sm:text-lg">
-            To support the canine community with a venue at a reasonable fee for
-            educational and amateur competitive events.
+            To support the canine community with a venue for educational and
+            amateur competitive events.
           </p>
         </div>
       </section>
