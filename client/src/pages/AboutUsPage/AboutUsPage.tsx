@@ -1,22 +1,17 @@
 import Footer from "../../components/Footer";
+import PageBanner from "../../components/PageBanner";
 
-import aboutUsDogHeader from "../../assets/dog-about-us.jpg";
+import dogBanner from "../../assets/dog-banner.jpg";
 
 export default function AboutUsPage() {
   return (
     <>
       <main className="flex flex-col gap-8 mb-8">
-        <div className="flex items-center relative before:absolute before:inset-0 before:block before:bg-gradient-to-r before:from-main-blue">
-          <h2 className="absolute p-2 text-4xl md:p-16 md:text-6xl text-main-white">
-            About Us
-          </h2>
-
-          <img
-            src={aboutUsDogHeader}
-            alt="Photo by Pauline Loroy on Unsplash at https://unsplash.com/photos/white-and-brown-long-coat-large-dog-U3aF7hgUSrk?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash</a>"
-            className="w-full h-60 object-cover"
-          />
-        </div>
+        <PageBanner
+          text="About Us"
+          src={dogBanner}
+          alt="Photo by Pauline Loroy on Unsplash at https://unsplash.com/photos/white-and-brown-long-coat-large-dog-U3aF7hgUSrk?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+        />
 
         <section className="flex flex-col items-center gap-8 max-w-6xl mx-auto p-4">
           <div className="flex flex-col bg-main-gray p-4 gap-4 items-center justify-center shadow-shift-right-main rounded-lg overflow-hidden max-w-lg sm:max-w-4xl">

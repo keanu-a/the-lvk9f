@@ -1,18 +1,19 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import { Bounce, ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 // import HeroSection from "./components/HeroSection";
 import Footer from "../../components/Footer";
+import Slideshow from "../../components/Slideshow";
 
 import dog3 from "../../assets/dog3.jpg";
 import dog2 from "../../assets/dog2.jpg";
 import dogSlideshow1 from "../../assets/hero1.jpg";
 import dogSlideshow2 from "../../assets/hero2.jpg";
 
-import Slideshow from "../../components/Slideshow";
-import { useEffect } from "react";
+import displayToast from "../../utils/displayToast";
 
 const SLIDESHOW_IMAGE_FILES = [
   {
@@ -37,32 +38,24 @@ const images = [
 ];
 
 export default function HomePage() {
+  // This is to display the "501(c)(3)" pop-up
   useEffect(() => {
-    toast.info("503c(3) status pending", {
-      position: "top-center",
-      autoClose: 7000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: false,
-      progress: undefined,
-      theme: "light",
-      transition: Bounce,
-    });
+    displayToast();
   }, []);
 
   return (
     <>
       <ToastContainer />
+
       <section
         className="flex relative items-center max-h-[48rem] overflow-hidden             
                    before:absolute before:inset-0 before:block before:bg-gradient-to-r before:from-main-blue"
       >
         <div className="flex flex-col text-main-white p-4 absolute">
-          <h1 className="text-3xl sm:text-6xl lg:text-[6rem]">
+          <h1 className="text-2xl sm:text-6xl lg:text-[6rem]">
             The Las Vegas K-9
           </h1>
-          <h1 className="text-3xl sm:text-6xl lg:text-[6rem]">Foundation</h1>
+          <h1 className="text-2xl sm:text-6xl lg:text-[6rem]">Foundation</h1>
         </div>
         {/* <h1 className="text-main-white p-4 absolute text-2xl w-7/12 sm:text-3xl md:text-4xl lg:text-6xl lg:w-1/2">
           The Las Vegas K-9 Foundation
@@ -102,7 +95,7 @@ export default function HomePage() {
             We're looking for passionate canine owners that want to join our
             mission and make Las Vegas the premier hub for canine events.
           </p>
-          <Link to="/membership">
+          <Link to="/about-us">
             <button className="btn-red text-sm sm:text-lg">Learn More</button>
           </Link>
         </div>

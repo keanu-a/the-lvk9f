@@ -8,6 +8,10 @@ interface navText {
 
 const companyLinks: navText[] = [
   {
+    to: "/about-us",
+    text: "About Us",
+  },
+  {
     to: "/events",
     text: "Events",
   },
@@ -19,8 +23,8 @@ const companyLinks: navText[] = [
 
 const getInvolvedLinks: navText[] = [
   {
-    to: "/membership",
-    text: "Membership",
+    to: "/become-a-supporter",
+    text: "Become a Supporter",
   },
   {
     to: "/donate",
@@ -53,7 +57,7 @@ export default function Footer() {
                 <li key={index}>
                   <Link
                     to={to}
-                    className="text-sm hover:text-main-white transition sm:text-base"
+                    className="text-base hover:text-main-white transition"
                   >
                     {text}
                   </Link>
@@ -69,7 +73,7 @@ export default function Footer() {
                 <li key={index}>
                   <Link
                     to={to}
-                    className="text-sm hover:text-main-white transition sm:text-base"
+                    className="text-base hover:text-main-white transition"
                   >
                     {text}
                   </Link>
@@ -82,7 +86,7 @@ export default function Footer() {
             <h2 className="text-md font-bold text-xl">Contact Us</h2>
             <ul className="flex flex-col gap-2 mt-4">
               {contactInformation.map((info, index) => (
-                <li key={index} className="text-sm sm:text-base">
+                <li key={index} className="text-base">
                   {info}
                 </li>
               ))}
