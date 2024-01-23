@@ -1,25 +1,20 @@
 import { useEffect } from "react";
-import { Bounce, ToastContainer, toast } from "react-toastify";
+
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+import displayToast from "../../utils/displayToast";
+
 export default function DonatePage() {
+  // This is to display the "501(c)(3)" pop-up
   useEffect(() => {
-    toast.info("503c(3) status pending", {
-      position: "top-center",
-      autoClose: 7000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: false,
-      progress: undefined,
-      theme: "light",
-      transition: Bounce,
-    });
+    displayToast();
   }, []);
 
   return (
     <>
       <ToastContainer />
+
       <main className="max-w-4xl mx-auto flex flex-col gap-4 items-center p-2">
         <h2>Donate to The Las Vegas K-9 Foundation</h2>
 
