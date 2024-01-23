@@ -54,7 +54,7 @@ export default function Slideshow({
                 : "h-50"
             }
           >
-            <img src={image} alt={alt} className="h-full object-fit" />
+            <img src={image} alt={alt} className="h-full object-cover" />
           </li>
         ))}
       </ul>
