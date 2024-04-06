@@ -44,9 +44,6 @@ export default function HomePage() {
           </h1>
           <h1 className="text-2xl sm:text-6xl lg:text-[6rem]">Foundation</h1>
         </div>
-        {/* <h1 className="text-main-white p-4 absolute text-2xl w-7/12 sm:text-3xl md:text-4xl lg:text-6xl lg:w-1/2">
-          The Las Vegas K-9 Foundation
-        </h1> */}
 
         <Slideshow
           imageNames={SLIDESHOW_IMAGE_FILES}
