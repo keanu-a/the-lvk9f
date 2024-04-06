@@ -1,52 +1,39 @@
-import { useEffect } from "react";
-import { Link } from "react-router-dom";
-
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { Link } from 'react-router-dom';
 
 // import HeroSection from "./components/HeroSection";
-import Footer from "../../components/Footer";
-import Slideshow from "../../components/Slideshow";
+import Footer from '../../components/Footer';
+import Slideshow from '../../components/Slideshow';
 
-import dog3 from "../../assets/dog3.jpg";
-import dog2 from "../../assets/dog2.jpg";
-import dogSlideshow1 from "../../assets/hero1.jpg";
-import dogSlideshow2 from "../../assets/hero2.jpg";
-
-import displayToast from "../../utils/displayToast";
+import dog3 from '../../assets/dog3.jpg';
+import dog2 from '../../assets/dog2.jpg';
+import dogSlideshow1 from '../../assets/hero1.jpg';
+import dogSlideshow2 from '../../assets/hero2.jpg';
 
 const SLIDESHOW_IMAGE_FILES = [
   {
     image: dogSlideshow1,
-    alt: "Man walking his 5 dogs outside",
+    alt: 'Man walking his 5 dogs outside',
   },
   {
     image: dogSlideshow2,
-    alt: "A shiba running in a desert",
+    alt: 'A shiba running in a desert',
   },
 ];
 
 const images = [
   {
     image: dog3,
-    alt: "Close up shot of a dog. https://www.freepik.com/free-photo/closeup-shot-cute-sitting-golden-retriever-puppy-isolated-white-surface_16224915.htm#query=dog&position=48&from_view=search&track=sph&uuid=1d7dff89-216e-4386-895b-7dc12419479a",
+    alt: 'Close up shot of a dog. https://www.freepik.com/free-photo/closeup-shot-cute-sitting-golden-retriever-puppy-isolated-white-surface_16224915.htm#query=dog&position=48&from_view=search&track=sph&uuid=1d7dff89-216e-4386-895b-7dc12419479a',
   },
   {
     image: dog2,
-    alt: "Dog being pet",
+    alt: 'Dog being pet',
   },
 ];
 
 export default function HomePage() {
-  // This is to display the "501(c)(3)" pop-up
-  useEffect(() => {
-    displayToast();
-  }, []);
-
   return (
     <>
-      <ToastContainer />
-
       <section
         className="flex relative items-center max-h-[48rem] overflow-hidden             
                    before:absolute before:inset-0 before:block before:bg-gradient-to-r before:from-main-blue"
@@ -63,7 +50,7 @@ export default function HomePage() {
 
         <Slideshow
           imageNames={SLIDESHOW_IMAGE_FILES}
-          buttonColor={"bg-main-white"}
+          buttonColor={'bg-main-white'}
         />
       </section>
 
