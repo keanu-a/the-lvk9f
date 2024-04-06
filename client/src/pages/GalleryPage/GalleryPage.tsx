@@ -1,20 +1,9 @@
-import { useEffect } from "react";
-import Footer from "../../components/Footer";
+import Layout from '../../components/Layout';
 
 export default function GalleryPage() {
-  useEffect(() => {
-    window.scroll(0, 0);
-  }, []);
-
   return (
-    <main>
-      <div className="h-screen flex flex-col items-center">
-        <h2>Gallery</h2>
-
-        <p>Coming Soon</p>
-      </div>
-
-      <Footer />
-    </main>
+    <Layout bannerText="Gallery">
+      <p className="h-screen">Coming soon</p>
+    </Layout>
   );
 }

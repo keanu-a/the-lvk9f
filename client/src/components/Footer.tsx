@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import logo from "../assets/final-multi.jpg";
+import { Link } from 'react-router-dom';
+import logo from '../assets/final-multi.jpg';
 
 interface navText {
   to: string;
@@ -8,33 +8,33 @@ interface navText {
 
 const companyLinks: navText[] = [
   {
-    to: "/about-us",
-    text: "About Us",
+    to: '/about-us',
+    text: 'About Us',
   },
   {
-    to: "/events",
-    text: "Events",
+    to: '/events',
+    text: 'Events',
   },
   {
-    to: "/gallery",
-    text: "Gallery",
+    to: '/gallery',
+    text: 'Gallery',
   },
 ];
 
 const getInvolvedLinks: navText[] = [
   {
-    to: "/become-a-supporter",
-    text: "Become a Supporter",
+    to: '/become-a-supporter',
+    text: 'Become a Supporter',
   },
   {
-    to: "/donate",
-    text: "Donate",
+    to: '/donate',
+    text: 'Donate',
   },
 ];
 
 const contactInformation: string[] = [
-  "702-608-7178",
-  "info@lasvegask9foundation.org",
+  '702-608-7178',
+  'info@lasvegask9foundation.org',
 ];
 
 export default function Footer() {
@@ -95,9 +95,13 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="bg-main-yellow flex text-center justify-center p-4 sm:p-2">
-        <p className="text-sm">
-          Copyright &copy; 2023 The Las Vegas K-9 Foundation. All Rights
+      <div className="bg-main-yellow flex text-center justify-between p-4 sm:p-2">
+        <p className="text-sm px-2">
+          The Las Vegas K-9 Foundation is a registered 501(c)3 non-profit
+          organization.
+        </p>
+        <p className="text-sm px-2">
+          Copyright &copy; 2024 The Las Vegas K-9 Foundation. All Rights
           Reserved.
         </p>
       </div>

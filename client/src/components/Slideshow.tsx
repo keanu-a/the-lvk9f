@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
 interface Image {
   image: string;
@@ -7,7 +7,7 @@ interface Image {
 
 interface SlideshowProps {
   imageNames: Image[];
-  type?: "landscape" | "portrait";
+  type?: 'landscape' | 'portrait';
   duration?: number;
   buttonColor?: string | null;
 }
@@ -15,7 +15,7 @@ interface SlideshowProps {
 // Default landscape type & 5 second changes
 export default function Slideshow({
   imageNames,
-  type = "landscape",
+  type = 'landscape',
   duration = 8,
   buttonColor = null,
 }: SlideshowProps) {
@@ -49,9 +49,9 @@ export default function Slideshow({
           <li
             key={index}
             className={
-              type === "landscape"
-                ? `${!isCurrentSlide(index) && "hidden"}`
-                : "h-50"
+              type === 'landscape'
+                ? `${!isCurrentSlide(index) && 'hidden'}`
+                : 'h-50'
             }
           >
             <img src={image} alt={alt} className="h-full object-cover" />
@@ -66,8 +66,8 @@ export default function Slideshow({
             <button
               className={`w-2 h-2 rounded-full ${
                 isCurrentSlide(index)
-                  ? "opacity-1"
-                  : "opacity-50 hover:bg-main-red"
+                  ? 'opacity-1'
+                  : 'opacity-50 hover:bg-main-red'
               } ${buttonColor}`}
               onClick={() => goToSlide(index)}
             ></button>
