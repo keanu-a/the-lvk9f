@@ -5,8 +5,8 @@ export default function AboutUsPage() {
     <>
       <Layout bannerText="About Us">
         <div className="flex flex-col bg-main-gray p-4 gap-4 items-center justify-center shadow-shift-right-main rounded-lg overflow-hidden max-w-lg sm:max-w-4xl">
-          <h2 className="text-lg font-bold sm:text-3xl">Mission Statement</h2>
-          <p className="text-sm h-full w-full sm:text-lg">
+          <h3>Mission Statement</h3>
+          <p className="text-sm sm:text-lg">
             The Las Vegas K-9 Foundation (LV K-9 Foundation) is a local Las
             Vegas non-profit organization that provides a venue with facilities,
             equipment and associated services for local canine organizations’
@@ -16,23 +16,21 @@ export default function AboutUsPage() {
         </div>
 
         <div className="flex flex-col gap-4 p-6 justify-center items-center bg-main-gray shadow-shift-left-red rounded-lg overflow-hidden">
-          <h2 className="text-lg font-bold sm:text-3xl">
-            About the LV K-9 Foundation
-          </h2>
+          <h3>About the LV K-9 Foundation</h3>
           <p className="text-sm sm:text-lg">
             The Las Vegas metropolitan area is home to a number of
             canine-oriented organizations, such as the Silver State Kennel Club,
-            the Las Vegas Valley Dog Obedience Club and LV DICE. These are local
-            organizations whose activities include AKC Conformation, Obedience,
-            and Agility training and competitions and other canine events and
-            sporting activities. There is a scarcity of available, affordable
-            and appropriate venues for these local organizations to host their
-            activities and events, making it increasingly difficult for them to
-            function and thrive. The LV K-9 Foundation was founded by a group of
-            canine enthusiasts from various fields of canine activities to
-            address these needs by securing and managing a canine-specific
-            facility for these local organizations to hold their events and
-            activities.
+            the Las Vegas Valley Dog Obedience Club and Gamblers Agility Club of
+            Greater Las Vegas. These are local organizations whose activities
+            include AKC Conformation, Obedience, and Agility training and
+            competitions and other canine events and sporting activities. There
+            is a scarcity of available, affordable and appropriate venues for
+            these local organizations to host their activities and events,
+            making it increasingly difficult for them to function and thrive.
+            The LV K-9 Foundation was founded by a group of canine enthusiasts
+            from various fields of canine activities to address these needs by
+            securing and managing a canine-specific facility for these local
+            organizations to hold their events and activities.
           </p>
           <p className="text-sm sm:text-lg">
             As a non-profit 501(c)(3), the LV K-9 Foundation will be funded by
@@ -44,8 +42,8 @@ export default function AboutUsPage() {
         </div>
 
         <div className="flex flex-col bg-main-gray p-4 gap-4 items-center justify-center shadow-shift-right-main rounded-lg overflow-hidden max-w-lg sm:max-w-4xl">
-          <h2 className="text-lg font-bold sm:text-3xl">Objectives</h2>
-          <p className="text-sm h-full w-full sm:text-lg">
+          <h3>Objectives</h3>
+          <p className="text-sm sm:text-lg">
             The primary objective of the LV K-9 Foundation is to provide a venue
             suitable for canine educational, conformation, obedience, agility,
             rally, Meet the Breeds, Canine Good Citizen, Barn Hunt, and other

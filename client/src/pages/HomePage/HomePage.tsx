@@ -53,7 +53,7 @@ export default function HomePage() {
 
       <section className="min-h-[12rem] w-full p-4 flex items-center justify-center">
         <div className="flex flex-col bg-main-gray p-4 gap-4 items-center justify-center shadow-shift-right-main rounded-lg overflow-hidden max-w-lg sm:max-w-4xl">
-          <h2 className="text-lg font-bold sm:text-3xl">Our Mission</h2>
+          <h3>Our Mission</h3>
           <p className="text-sm h-full w-full text-center sm:text-lg">
             Provide a venue for educational experiences for owners and their
             canine companions, advancing amateur dog sports competitions.
@@ -74,7 +74,7 @@ export default function HomePage() {
         </div>
 
         <div className="flex flex-col gap-4 p-6 justify-center items-center bg-main-white shadow-shift-left-red rounded-lg overflow-hidden">
-          <h2 className="text-lg font-bold sm:text-3xl">Get Involved Today</h2>
+          <h3>Get Involved Today</h3>
           <p className="text-sm text-center sm:text-lg">
             We're looking for passionate canine owners that want to join our
             mission and make Las Vegas the premier hub for canine events.
@@ -87,7 +87,7 @@ export default function HomePage() {
 
       <section className="flex items-center justify-center p-8">
         <div className="flex flex-col gap-4 p-6 items-center justify-center bg-main-gray shadow-shift-right-secondary rounded-lg overflow-hidden">
-          <h2 className="text-lg font-bold sm:text-3xl">Our Vision & Goals</h2>
+          <h3>Our Vision & Goals</h3>
 
           <p className="text-sm text-center sm:text-lg">
             To support the canine community with a venue for educational and
@@ -98,7 +98,7 @@ export default function HomePage() {
 
       <section className="h-[32rem] flex items-center justify-center p-8 bg-main-gray">
         <div className="h-full flex flex-col justify-between align-middle text-center gap-4">
-          <h2 className="text-lg font-bold sm:text-3xl">Upcoming Events</h2>
+          <h3>Upcoming Events</h3>
           <p className="text-sm text-center sm:text-lg">Coming Soon</p>
 
           <Link to="/events">
