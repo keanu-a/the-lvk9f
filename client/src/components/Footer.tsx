@@ -49,7 +49,7 @@ export default function Footer() {
           />
         </Link>
 
-        <div className="grid grid-cols-1 text-center sm:text-left sm:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 text-center gap-8 sm:text-left md:gap-0 md:grid-cols-3">
           <div>
             <h2 className="text-md font-bold text-xl">Organization</h2>
             <ul className="flex flex-col gap-2 mt-4">
@@ -95,7 +95,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="bg-main-yellow flex text-center justify-between p-4 sm:p-2">
+      <div className="bg-main-yellow flex flex-col gap-4 text-center justify-between p-4 sm:p-2 md:flex-row">
         <p className="text-sm px-2">
           The Las Vegas K-9 Foundation is a registered 501(c)3 non-profit
           organization.
