@@ -4,30 +4,28 @@ import { Link } from 'react-router-dom';
 import Footer from '../../components/Footer';
 import Slideshow from '../../components/Slideshow';
 
-import dog3 from '../../assets/dog3.jpg';
-import dog2 from '../../assets/dog2.jpg';
+import awards from '../../assets/awards.jpg';
 import dogSlideshow1 from '../../assets/hero1.jpg';
 import dogSlideshow2 from '../../assets/hero2.jpg';
+import dogSlideshow3 from '../../assets/hero3.jpg';
+import dogSlideshow4 from '../../assets/hero4.jpg';
 
 const SLIDESHOW_IMAGE_FILES = [
   {
     image: dogSlideshow1,
-    alt: 'Man walking his 5 dogs outside',
+    alt: 'Dog named Kirby running through tube in dog course',
   },
   {
     image: dogSlideshow2,
-    alt: 'A shiba running in a desert',
-  },
-];
-
-const images = [
-  {
-    image: dog3,
-    alt: 'Close up shot of a dog. https://www.freepik.com/free-photo/closeup-shot-cute-sitting-golden-retriever-puppy-isolated-white-surface_16224915.htm#query=dog&position=48&from_view=search&track=sph&uuid=1d7dff89-216e-4386-895b-7dc12419479a',
+    alt: 'Dog named Stewie jumping over pole in dog course',
   },
   {
-    image: dog2,
-    alt: 'Dog being pet',
+    image: dogSlideshow3,
+    alt: 'Dog named Mango humping over pole in dog course', 
+  },
+  {
+    image: dogSlideshow4,
+    alt: 'Dog named Terry looking up at his owner', 
   },
 ];
 
@@ -35,14 +33,15 @@ export default function HomePage() {
   return (
     <>
       <section
-        className="flex relative items-center max-h-[48rem] overflow-hidden             
-                   before:absolute before:inset-0 before:block before:bg-gradient-to-r before:from-main-blue"
+        className="flex relative items-center aspect-[3/2] md:aspect-[5/2] overflow-hidden
+                  before:absolute before:inset-0 before:block before:bg-main-black before:bg-opacity-50"
       >
-        <div className="flex flex-col text-main-white p-4 absolute">
-          <h1 className="text-2xl sm:text-6xl lg:text-[6rem]">
-            The Las Vegas K-9
+        <div className="flex flex-col text-main-white p-4 absolute text-center w-full">
+          <h1 className="text-2xl sm:text-6xl md:text-[4rem] lg:text-[6rem]">
+            The Las Vegas K-9 Foundation
           </h1>
-          <h1 className="text-2xl sm:text-6xl lg:text-[6rem]">Foundation</h1>
+          <div className="bg-main-white w-[16rem] h-[2px] mx-auto mt-2 md:w-[48rem] md:mt-8"> </div>
+          <h3 className="mt-1 text-sm md:text-2xl md:mt-4">Connecting Canine Enthusiasts</h3>
         </div>
 
         <Slideshow
@@ -61,21 +60,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="h-[32rem] flex flex-col gap-4 justify-center items-center py-6 px-4 bg-main-gray overflow-hidden sm:flex-row">
-        <div className="h-1/2 flex p-4 align-middle justify-center items-center overflow-hidden sm:w-1/2 sm:h-3/4 sm:flex-col md:flex-row">
-          {images.map(({ image, alt }, index) => (
-            <div
-              key={index}
-              className="object-cover w-1/2 m-1 shadow-md rounded-lg overflow-hidden"
-            >
-              <img src={image} alt={alt} />
-            </div>
-          ))}
-        </div>
+      <section className="h-[32rem] flex flex-col gap-4 items-center pb-4 bg-main-gray overflow-hidden sm:flex-row sm:pb-0 sm:pr-4">
+        <img src={awards} alt="Dog with a lot of awards" className="w-full object-cover h-full sm:w-1/2" />
 
-        <div className="flex flex-col gap-4 p-6 justify-center items-center bg-main-white shadow-shift-left-red rounded-lg overflow-hidden">
+        <div className="flex flex-col gap-4 m-4 py-16 px-6 h-fit justify-center items-center bg-main-white shadow-shift-left-red rounded-lg overflow-hidden sm:m-0">
           <h3>Get Involved Today</h3>
-          <p className="text-sm text-center sm:text-lg">
+
+          <p className="text-sm text-center w-full sm:text-lg">
             We're looking for passionate canine owners that want to join our
             mission and make Las Vegas the premier hub for canine events.
           </p>

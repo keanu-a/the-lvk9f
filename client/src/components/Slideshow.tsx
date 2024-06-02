@@ -42,7 +42,7 @@ export default function Slideshow({
   };
 
   return (
-    <div className="flex justify-center overflow-hidden">
+    <div className="flex justify-center overflow-hidden w-full">
       {/* Slideshow images */}
       <ul className="list-none p-0 w-full">
         {imageNames.map(({ image, alt }, index) => (
@@ -54,7 +54,7 @@ export default function Slideshow({
                 : 'h-50'
             }
           >
-            <img src={image} alt={alt} className="h-full object-cover" />
+            <img src={image} alt={alt} className="w-full object-fill" />
           </li>
         ))}
       </ul>
