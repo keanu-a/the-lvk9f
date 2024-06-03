@@ -25,7 +25,7 @@ export default function Layout({ bannerText, children }: LayoutProps) {
           alt="Photo by Pauline Loroy on Unsplash at https://unsplash.com/photos/white-and-brown-long-coat-large-dog-U3aF7hgUSrk?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
         />
 
-        <div className="flex flex-col items-center gap-8 max-w-6xl mx-auto p-4">
+        <div className="flex flex-col items-center gap-8">
           {children}
         </div>
       </main>
