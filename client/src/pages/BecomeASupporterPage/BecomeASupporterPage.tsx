@@ -5,7 +5,7 @@ import Layout from '../../components/Layout';
 export default function BecomeASupporterPage() {
   return (
     <Layout bannerText="Become a Supporter">
-      <div className="h-screen flex flex-col items-center">
+      <div className="h-screen flex flex-col gap-4 py-4 items-center">
         <p className="text-xl">
           Exciting updates coming soon! In the meantime, you can show your
           support by making a donation. Every contribution makes a difference!
