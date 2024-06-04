@@ -63,7 +63,7 @@ export default function HomePage() {
       <section className="h-[32rem] flex flex-col gap-4 items-center pb-4 bg-main-gray overflow-hidden sm:flex-row sm:pb-0 sm:pr-4">
         <img src={awards} alt="Dog with a lot of awards" className="w-full object-cover h-full sm:w-1/2" />
 
-        <div className="flex flex-col gap-4 m-4 py-16 px-6 h-fit justify-center items-center bg-main-white shadow-shift-left-red rounded-lg overflow-hidden sm:m-0">
+        <div className="flex flex-col gap-4 m-4 py-16 px-6 h-fit w-1/2 justify-center items-center bg-main-white shadow-shift-left-red rounded-lg overflow-hidden sm:m-0">
           <h3>Get Involved Today</h3>
 
           <p className="text-sm text-center w-full sm:text-lg">

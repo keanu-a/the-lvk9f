@@ -49,7 +49,7 @@ export default function Footer() {
           />
         </Link>
 
-        <div className="grid grid-cols-1 text-center gap-8 sm:text-left md:gap-0 md:grid-cols-3">
+        <div className="grid grid-cols-1 text-center gap-8 sm:text-left lg:grid-cols-3">
           <div>
             <h2 className="text-md font-bold text-xl">Organization</h2>
             <ul className="flex flex-col gap-2 mt-4">
