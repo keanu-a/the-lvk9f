@@ -7,15 +7,13 @@ interface Image {
 
 interface SlideshowProps {
   imageNames: Image[];
-  type?: 'landscape' | 'portrait';
   duration?: number;
   buttonColor?: string | null;
 }
 
 // Default landscape type & 5 second changes
 export default function Slideshow({
-  imageNames,
-  type = 'landscape',
+  imageNames = [],
   duration = 8,
   buttonColor = null,
 }: SlideshowProps) {
@@ -42,17 +40,14 @@ export default function Slideshow({
   };
 
   return (
-    <div className="flex justify-center overflow-hidden w-full">
+    <div className="flex justify-center w-full overflow-hidden">
       {/* Slideshow images */}
+      {/* Using list for images * OLD CODE * */}
       <ul className="list-none p-0 w-full">
         {imageNames.map(({ image, alt }, index) => (
           <li
             key={index}
-            className={
-              type === 'landscape'
-                ? `${!isCurrentSlide(index) && 'hidden'}`
-                : 'h-50'
-            }
+            className={`${!isCurrentSlide(index) && 'hidden'}`}
           >
             <img src={image} alt={alt} className="w-full object-fill" />
           </li>
