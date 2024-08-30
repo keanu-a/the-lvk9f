@@ -21,11 +21,11 @@ const SLIDESHOW_IMAGE_FILES = [
   },
   {
     image: dogSlideshow3,
-    alt: 'Dog named Mango humping over pole in dog course', 
+    alt: 'Dog named Mango humping over pole in dog course',
   },
   {
     image: dogSlideshow4,
-    alt: 'Dog named Terry looking up at his owner', 
+    alt: 'Dog named Terry looking up at his owner',
   },
 ];
 
@@ -40,8 +40,12 @@ export default function HomePage() {
           <h1 className="text-2xl sm:text-6xl md:text-[4rem] lg:text-[6rem]">
             The Las Vegas K-9 Foundation
           </h1>
-          <div className="bg-main-white w-[16rem] h-[2px] mx-auto mt-2 md:w-[48rem] md:mt-8"> </div>
-          <h3 className="mt-1 text-sm md:text-2xl md:mt-4">Connecting Canine Enthusiasts</h3>
+          <div className="bg-main-white w-[16rem] h-[2px] mx-auto mt-2 md:w-[48rem] md:mt-8">
+            {' '}
+          </div>
+          <h3 className="mt-1 text-xs sm:text-base md:text-2xl md:mt-4">
+            Building a Stronger Community, One Paw at a Time!
+          </h3>
         </div>
 
         <Slideshow
@@ -61,7 +65,11 @@ export default function HomePage() {
       </section>
 
       <section className="h-[32rem] flex flex-col gap-4 items-center pb-4 bg-main-gray overflow-hidden sm:flex-row sm:pb-0 sm:pr-4">
-        <img src={awards} alt="Dog with a lot of awards" className="w-full object-cover h-full sm:w-1/2" />
+        <img
+          src={awards}
+          alt="Dog with a lot of awards"
+          className="w-full object-cover h-full sm:w-1/2"
+        />
 
         <div className="flex flex-col gap-4 m-4 py-16 px-6 h-fit w-1/2 justify-center items-center bg-main-white shadow-shift-left-red rounded-lg overflow-hidden sm:m-0">
           <h3>Get Involved Today</h3>
