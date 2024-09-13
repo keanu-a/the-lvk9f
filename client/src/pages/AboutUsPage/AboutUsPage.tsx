@@ -59,7 +59,7 @@ export default function AboutUsPage() {
   return (
     <>
       <Layout bannerText="About Us">
-        <section className="bg-main-red w-full p-4 sm:py-12">
+        <section className="w-full p-4 sm:py-12">
           <div className="flex flex-col gap-4 justify-center max-w-7xl mx-auto">
             <h3 className="font-bold text-center">Mission Statement</h3>
             <p className="text-sm sm:text-lg">
