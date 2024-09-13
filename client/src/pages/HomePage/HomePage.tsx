@@ -9,6 +9,8 @@ import dogSlideshow1 from '../../assets/hero1.jpg';
 import dogSlideshow2 from '../../assets/hero2.jpg';
 import dogSlideshow3 from '../../assets/hero3.jpg';
 import dogSlideshow4 from '../../assets/hero4.jpg';
+import yardSalePreview from '../../assets/events/yardsale-preview.png';
+import EventCard from '../../components/EventCard';
 
 const SLIDESHOW_IMAGE_FILES = [
   {
@@ -26,6 +28,15 @@ const SLIDESHOW_IMAGE_FILES = [
   {
     image: dogSlideshow4,
     alt: 'Dog named Terry looking up at his owner',
+  },
+];
+
+const EVENTS = [
+  {
+    image: yardSalePreview,
+    alt: 'Yard show cover picture',
+    eventName: '1st Annual Yard Sale',
+    date: '10/19 - 10/20',
   },
 ];
 
@@ -68,10 +79,10 @@ export default function HomePage() {
         <img
           src={awards}
           alt="Dog with a lot of awards"
-          className="w-full object-cover h-full sm:w-1/2"
+          className="w-full object-cover h-1/2 sm:h-full sm:w-1/2"
         />
 
-        <div className="flex flex-col gap-4 m-4 py-16 px-6 h-fit w-1/2 justify-center items-center bg-main-white shadow-shift-left-red rounded-lg overflow-hidden sm:m-0">
+        <div className="flex flex-col gap-4 m-4 py-16 px-6 h-fit w-2/3 justify-center items-center bg-main-white shadow-shift-left-red rounded-lg overflow-hidden sm:m-0">
           <h3>Get Involved Today</h3>
 
           <p className="text-sm text-center w-full sm:text-lg">
@@ -98,7 +109,20 @@ export default function HomePage() {
       <section className="h-[32rem] flex items-center justify-center p-8 bg-main-gray">
         <div className="h-full flex flex-col justify-between align-middle text-center gap-4">
           <h3>Upcoming Events</h3>
-          <p className="text-sm text-center sm:text-lg">Coming Soon</p>
+
+          {EVENTS.length === 0 ? (
+            <p className="text-sm text-center sm:text-lg">Coming Soon</p>
+          ) : (
+            EVENTS.map((event, eventKey) => (
+              <EventCard
+                key={eventKey}
+                image={event.image}
+                altText={event.alt}
+                eventName={event.eventName}
+                date={event.date}
+              />
+            ))
+          )}
 
           <Link to="/events">
             <button className="btn-red text-sm sm:text-lg">
