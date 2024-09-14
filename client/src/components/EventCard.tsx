@@ -26,7 +26,7 @@ export default function EventCard({
       </div>
       <div className="h-3/5 px-4 flex flex-col">
         <div className="my-4">
-          <p className="text-sm font-bold text-main-blue">{date}</p>
+          <p className="text-sm font-bold text-main-blue-darker">{date}</p>
           <h2 className="text-xl">{eventName}</h2>
         </div>
 
@@ -34,7 +34,7 @@ export default function EventCard({
 
         <Link
           to="/events"
-          className="flex gap-1 items-center transition-all hover:text-main-blue hover:translate-x-1"
+          className="flex gap-1 items-center transition-all hover:text-main-blue-darker hover:translate-x-1"
         >
           <CaretCircleDoubleRight size={ICON_SIZE} />
           <p className="text-base">Learn More</p>
