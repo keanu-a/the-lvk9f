@@ -36,7 +36,9 @@ const EVENTS = [
     image: yardSalePreview,
     alt: 'Yard show cover picture',
     eventName: '1st Annual Yard Sale',
-    date: '10/19 - 10/20',
+    eventDetails:
+      'Join us starting at 8:00AM as there will be clothing, furniture, electronics, toys and much more!',
+    date: 'Oct. 19 - Oct. 20',
   },
 ];
 
@@ -106,7 +108,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="h-[32rem] flex items-center justify-center p-8 bg-main-gray">
+      <section className="h-[36rem] flex items-center justify-center p-8 bg-main-gray">
         <div className="h-full flex flex-col justify-between align-middle text-center gap-4">
           <h3>Upcoming Events</h3>
 
@@ -119,6 +121,7 @@ export default function HomePage() {
                 image={event.image}
                 altText={event.alt}
                 eventName={event.eventName}
+                eventDetails={event.eventDetails}
                 date={event.date}
               />
             ))
