@@ -34,10 +34,15 @@ export default function EventCard({
 
         <Link
           to="/events"
-          className="flex gap-1 items-center transition-all hover:text-main-blue-darker hover:translate-x-1"
+          className="flex gap-1 items-center transition-all overflow-hidden group hover:text-main-blue-darker"
         >
-          <CaretCircleDoubleRight size={ICON_SIZE} />
-          <p className="text-base">Learn More</p>
+          <CaretCircleDoubleRight
+            size={ICON_SIZE}
+            className="-translate-x-6 transition-all group-hover:translate-x-0"
+          />
+          <p className="text-base transition-all -translate-x-6 group-hover:translate-x-0">
+            Learn More
+          </p>
         </Link>
       </div>
     </div>

@@ -1,5 +1,4 @@
 import Layout from '../../components/Layout';
-import HoverCard from '../../components/HoverCard';
 
 import {
   UsersFour,
@@ -9,7 +8,7 @@ import {
   Dog,
 } from '@phosphor-icons/react';
 
-import sskc from '../../assets/sskc.webp';
+import sskc from '../../assets/sskc.png';
 import lvvdoc from '../../assets/lvvdoc.png';
 import lvdice from '../../assets/lvdice.png';
 import aboutBottom from '../../assets/about-bottom.jpg';
@@ -73,12 +72,12 @@ export default function AboutUsPage() {
         </section>
 
         <section className="bg-main-gray w-full py-8 sm:px-4">
-          <div className="flex flex-col max-w-7xl gap-4 mx-auto px-4 md:px-0">
+          <div className="flex flex-col max-w-7xl gap-6 mx-auto px-4 md:px-0">
             <h3 className="font-bold text-center mb-2">
               About the LV K-9 Foundation
             </h3>
 
-            <div className="flex flex-col items-center gap-4 lg:flex-row">
+            <div className="flex flex-col items-center gap-4 lg:flex-row lg:justify-between">
               <p className="text-sm mb-4 sm:mb-0 sm:text-lg lg:w-1/2">
                 The Las Vegas metropolitan area is home to a number of
                 canine-oriented organizations, such as the Silver State Kennel
@@ -86,9 +85,18 @@ export default function AboutUsPage() {
                 Agility Club of Greater Las Vegas.
               </p>
 
-              <div className="flex flex-col justify-between items-center gap-2 mb-4 sm:flex-row md:w-1/2 ">
-                {ORGANIZATIONS.map(({ image, text, link }, idx) => (
-                  <HoverCard key={idx} image={image} text={text} link={link} />
+              {/* TODO */}
+              <div className="grid grid-cols-2 w-3/4 bg-main-white rounded-md shadow-md overflow-hidden md:w-fit md:grid-cols-4">
+                {ORGANIZATIONS.map((org, orgIndex) => (
+                  <a
+                    key={orgIndex}
+                    href={org.link}
+                    className={`h-full flex flex-col justify-center p-4 transition-all hover:shadow-[inset_1px_1px_6px_rgba(0,0,0,0.2)] cursor-pointer ${
+                      orgIndex === 2 && 'col-span-2'
+                    }`}
+                  >
+                    <img src={org.image} className="w-fit h-fit" />
+                  </a>
                 ))}
               </div>
             </div>
