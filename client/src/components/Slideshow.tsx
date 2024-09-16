@@ -42,13 +42,9 @@ export default function Slideshow({
   return (
     <div className="flex justify-center w-full overflow-hidden">
       {/* Slideshow images */}
-      {/* Using list for images * OLD CODE * */}
       <ul className="list-none p-0 w-full">
         {imageNames.map(({ image, alt }, index) => (
-          <li
-            key={index}
-            className={`${!isCurrentSlide(index) && 'hidden'}`}
-          >
+          <li key={index} className={`${!isCurrentSlide(index) && 'hidden'}`}>
             <img src={image} alt={alt} className="w-full object-fill" />
           </li>
         ))}
