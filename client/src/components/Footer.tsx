@@ -101,7 +101,7 @@ export default function Footer() {
           organization.
         </p>
         <p className="text-sm px-2">
-          Copyright &copy; 2024 The Las Vegas K-9 Foundation. All Rights
+          Copyright &copy; 2025 The Las Vegas K-9 Foundation. All Rights
           Reserved.
         </p>
       </div>
