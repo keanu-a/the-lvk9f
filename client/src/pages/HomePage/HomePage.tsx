@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom';
 // import HeroSection from "./components/HeroSection";
 import Footer from '../../components/Footer';
 import Slideshow from '../../components/Slideshow';
+import EventCard from '../../components/EventCard';
 
 import awards from '../../assets/awards.jpg';
 import dogSlideshow1 from '../../assets/hero1.jpg';
 import dogSlideshow2 from '../../assets/hero2.jpg';
 import dogSlideshow3 from '../../assets/hero3.jpg';
 import dogSlideshow4 from '../../assets/hero4.jpg';
-import yardSalePreview from '../../assets/events/yardsale-preview.png';
-import EventCard from '../../components/EventCard';
+import rallyPreview from '../../assets/events/rally-feb-1/rally-preview.png';
 
 const SLIDESHOW_IMAGE_FILES = [
   {
@@ -33,12 +33,12 @@ const SLIDESHOW_IMAGE_FILES = [
 
 const EVENTS = [
   {
-    image: yardSalePreview,
-    alt: 'Yard show cover picture',
-    eventName: '1st Annual Yard Sale',
+    image: rallyPreview,
+    alt: 'Dog rally signage cover picture',
+    eventName: 'Rally B-Match',
     eventDetails:
-      'Join us starting at 8:00AM as there will be clothing, furniture, electronics, toys and much more!',
-    date: 'Oct. 19 - Oct. 20',
+      'Join us for a thrilling event from 11:00AM to 1:00PM for $5 per run or $15 for unlimited runs!',
+    date: 'Saturday, Feb. 1, 2025',
   },
 ];
 

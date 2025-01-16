@@ -40,7 +40,7 @@ export default function Slideshow({
   };
 
   return (
-    <div className="flex justify-center w-full overflow-hidden">
+    <div className="flex justify-center w-full">
       {/* Slideshow images */}
       <ul className="list-none p-0 w-full">
         {imageNames.map(({ image, alt }, index) => (
@@ -50,12 +50,25 @@ export default function Slideshow({
         ))}
       </ul>
 
+      {/* <ul className="flex list-none">
+        {imageNames.map(({ image, alt }, index) => (
+          <li
+            key={index}
+            className={`w-screen transition-transform ease-out -translate-x-[${
+              (index - slideIndex) * 100
+            }%]`}
+          >
+            <img src={image} alt={alt} className="w-full object-fill" />
+          </li>
+        ))}
+      </ul> */}
+
       {/* Slideshow buttons */}
       <ul className="gap-4 flex absolute bottom-0 p-4">
         {imageNames.map((_, index) => (
           <li key={index}>
             <button
-              className={`w-2 h-2 rounded-full ${
+              className={`w-6 h-2 rounded-full ${
                 isCurrentSlide(index)
                   ? 'opacity-1'
                   : 'opacity-50 hover:bg-main-red'
