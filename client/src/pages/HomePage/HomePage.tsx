@@ -32,14 +32,14 @@ const SLIDESHOW_IMAGE_FILES = [
 ];
 
 const EVENTS = [
-  {
-    image: rallyPreview,
-    alt: 'Dog rally signage cover picture',
-    eventName: 'Rally B-Match',
-    eventDetails:
-      'Join us for a thrilling event from 11:00AM to 1:00PM for $5 per run or $15 for unlimited runs!',
-    date: 'Saturday, Feb. 1, 2025',
-  },
+  // {
+  //   image: rallyPreview,
+  //   alt: 'Dog rally signage cover picture',
+  //   eventName: 'Rally B-Match',
+  //   eventDetails:
+  //     'Join us for a thrilling event from 11:00AM to 1:00PM for $5 per run or $15 for unlimited runs!',
+  //   date: 'Saturday, Feb. 1, 2025',
+  // },
 ];
 
 export default function HomePage() {
