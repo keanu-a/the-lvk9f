@@ -10,7 +10,6 @@ import dogSlideshow1 from '../../assets/hero1.jpg';
 import dogSlideshow2 from '../../assets/hero2.jpg';
 import dogSlideshow3 from '../../assets/hero3.jpg';
 import dogSlideshow4 from '../../assets/hero4.jpg';
-import rallyPreview from '../../assets/events/rally-feb-1/rally-preview.png';
 
 const SLIDESHOW_IMAGE_FILES = [
   {
@@ -31,16 +30,15 @@ const SLIDESHOW_IMAGE_FILES = [
   },
 ];
 
-const EVENTS = [
-  // {
-  //   image: rallyPreview,
-  //   alt: 'Dog rally signage cover picture',
-  //   eventName: 'Rally B-Match',
-  //   eventDetails:
-  //     'Join us for a thrilling event from 11:00AM to 1:00PM for $5 per run or $15 for unlimited runs!',
-  //   date: 'Saturday, Feb. 1, 2025',
-  // },
-];
+interface Event {
+  image: string;
+  alt: string;
+  eventName: string;
+  eventDetails: string;
+  date: string;
+}
+
+const EVENTS: Event[] = [];
 
 export default function HomePage() {
   return (

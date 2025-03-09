@@ -5,7 +5,12 @@ import rallyFlyer from '../../assets/events/rally-feb-1/rally.jpg';
 
 const IMAGE_SIZE = 700;
 
-const UPCOMING_EVENTS = [];
+interface Event {
+  eventImage: string;
+  altText: string;
+}
+
+const UPCOMING_EVENTS: Event[] = [];
 
 const PAST_EVENTS = [
   {
