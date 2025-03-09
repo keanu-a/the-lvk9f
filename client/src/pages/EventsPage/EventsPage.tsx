@@ -5,17 +5,21 @@ import rallyFlyer from '../../assets/events/rally-feb-1/rally.jpg';
 
 const IMAGE_SIZE = 700;
 
-const UPCOMING_EVENTS = [
-  {
-    eventImage: rallyFlyer,
-    altText: 'Rally B-Match flyer',
-  },
-];
+interface Event {
+  eventImage: string;
+  altText: string;
+}
+
+const UPCOMING_EVENTS: Event[] = [];
 
 const PAST_EVENTS = [
   {
     eventImage: yardSaleFlyer,
     altText: '1st annual yard sale flyer',
+  },
+  {
+    eventImage: rallyFlyer,
+    altText: 'Rally B-Match flyer',
   },
 ];
 
@@ -26,11 +30,16 @@ export default function EventsPage() {
         {UPCOMING_EVENTS.length} UPCOMING EVENT
       </h2>
 
-      {UPCOMING_EVENTS.map((event, eventIndex) => (
-        <div key={eventIndex}>
-          <img src={event.eventImage} alt={event.altText} width={IMAGE_SIZE} />
-        </div>
-      ))}
+      {UPCOMING_EVENTS.length > 0 &&
+        UPCOMING_EVENTS.map((event, eventIndex) => (
+          <div key={eventIndex}>
+            <img
+              src={event.eventImage}
+              alt={event.altText}
+              width={IMAGE_SIZE}
+            />
+          </div>
+        ))}
 
       <h2 className="p-4 text-main-blue">PAST EVENTS</h2>
 
