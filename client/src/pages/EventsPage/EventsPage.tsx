@@ -1,6 +1,7 @@
 import Layout from '../../components/Layout';
 
-import yardSaleFlyer from '../../assets/events/yardsale-oct-24/yardsale.jpg';
+import yardSaleFlyer2025 from '../../assets/events/yardsales/yardsale-2025.webp';
+import yardSaleFlyer2024 from '../../assets/events/yardsales/yardsale-2024.jpg';
 import rallyFlyer from '../../assets/events/rally-feb-1/rally.jpg';
 
 const IMAGE_SIZE = 700;
@@ -10,11 +11,16 @@ interface Event {
   altText: string;
 }
 
-const UPCOMING_EVENTS: Event[] = [];
+const UPCOMING_EVENTS: Event[] = [
+  {
+    eventImage: yardSaleFlyer2025,
+    altText: '2nd annual yard sale fundraiser',
+  },
+];
 
 const PAST_EVENTS = [
   {
-    eventImage: yardSaleFlyer,
+    eventImage: yardSaleFlyer2024,
     altText: '1st annual yard sale flyer',
   },
   {
