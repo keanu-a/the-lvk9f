@@ -46,8 +46,8 @@ const EVENTS: Event[] = [
     alt: 'October yardsale 2025',
     eventName: '2nd Annual Yard Sale',
     eventDetails:
-      'Come join our 2 day yard sale that will include clothing, furniture, toys, and more!',
-    date: 'Oct 19, 2025',
+      'Come support and join our 2 day yard sale that will include clothing, furniture, toys, and more!',
+    date: 'Oct 18, 2025 - Oct 19, 2025',
   },
 ];
 
