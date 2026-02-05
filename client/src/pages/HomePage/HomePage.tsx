@@ -11,8 +11,6 @@ import dogSlideshow2 from '../../assets/hero2.jpg';
 import dogSlideshow3 from '../../assets/hero3.jpg';
 import dogSlideshow4 from '../../assets/hero4.jpg';
 
-import yardsale from '../../assets/events/yardsales/yardsale-preview.png';
-
 const SLIDESHOW_IMAGE_FILES = [
   {
     image: dogSlideshow1,
@@ -40,16 +38,7 @@ interface Event {
   date: string;
 }
 
-const EVENTS: Event[] = [
-  {
-    image: yardsale,
-    alt: 'October yardsale 2025',
-    eventName: '2nd Annual Yard Sale',
-    eventDetails:
-      'Come support and join our 2 day yard sale that will include clothing, furniture, toys, and more!',
-    date: 'Oct 18, 2025 - Oct 19, 2025',
-  },
-];
+const EVENTS: Event[] = [];
 
 export default function HomePage() {
   return (

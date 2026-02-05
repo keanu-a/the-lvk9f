@@ -11,12 +11,7 @@ interface Event {
   altText: string;
 }
 
-const UPCOMING_EVENTS: Event[] = [
-  {
-    eventImage: yardSaleFlyer2025,
-    altText: '2nd annual yard sale fundraiser',
-  },
-];
+const UPCOMING_EVENTS: Event[] = [];
 
 const PAST_EVENTS = [
   {
@@ -26,6 +21,10 @@ const PAST_EVENTS = [
   {
     eventImage: rallyFlyer,
     altText: 'Rally B-Match flyer',
+  },
+  {
+    eventImage: yardSaleFlyer2025,
+    altText: '2nd annual yard sale fundraiser',
   },
 ];
 
