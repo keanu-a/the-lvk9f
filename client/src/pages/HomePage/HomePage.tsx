@@ -11,8 +11,6 @@ import dogSlideshow2 from '../../assets/hero2.jpg';
 import dogSlideshow3 from '../../assets/hero3.jpg';
 import dogSlideshow4 from '../../assets/hero4.jpg';
 
-import yardsale from '../../assets/events/yardsales/yardsale-preview.png';
-
 const SLIDESHOW_IMAGE_FILES = [
   {
     image: dogSlideshow1,
