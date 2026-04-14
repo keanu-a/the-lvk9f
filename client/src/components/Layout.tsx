@@ -18,7 +18,7 @@ export default function Layout({ bannerText, children }: LayoutProps) {
 
   return (
     <>
-      <main className="flex flex-col">
+      <main className="flex flex-col min-h-screen">
         <PageBanner
           text={bannerText}
           src={dogBanner}
