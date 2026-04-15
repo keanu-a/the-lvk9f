@@ -11,7 +11,7 @@
 }
 
 @layer components {
-  .donate-btn {
+  .btn-main {
     @apply text-main-white bg-main-blue hover:text-main-blue hover:bg-main-gray hover:shadow-shift-left-main hover:shadow-main-blue px-4 py-2 rounded-lg;
   }
 
