@@ -12,7 +12,7 @@ export default function BecomeASupporterPage() {
         </p>
 
         <Link to="/donate">
-          <button className="transition text-xl font-medium donate-btn sm:text-lg">
+          <button className="transition text-xl font-medium btn-main sm:text-lg">
             Donate Now
           </button>
         </Link>

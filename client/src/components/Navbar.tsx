@@ -1,8 +1,8 @@
-import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
-import logo from "../assets/final-multi.jpg";
-import { List, X } from "@phosphor-icons/react";
+import logo from '../assets/final-multi.jpg';
+import { List, X } from '@phosphor-icons/react';
 
 interface navText {
   to: string;
@@ -11,24 +11,24 @@ interface navText {
 
 const navLinkText: navText[] = [
   {
-    to: "/about-us",
-    text: "About Us",
+    to: '/about-us',
+    text: 'About Us',
   },
   {
-    to: "/events",
-    text: "Events",
+    to: '/events',
+    text: 'Events',
   },
   {
-    to: "/gallery",
-    text: "Gallery",
+    to: '/gallery',
+    text: 'Gallery',
   },
   {
-    to: "/become-a-supporter",
-    text: "Become a Supporter",
+    to: '/become-a-supporter',
+    text: 'Become a Supporter',
   },
   {
-    to: "/donate",
-    text: "Donate",
+    to: '/donate',
+    text: 'Donate',
   },
 ];
 
@@ -56,7 +56,7 @@ export default function Navbar() {
       <ul
         className={`flex flex-col gap-4 p-8 w-full text-center absolute z-20 top-full right-0 
                     shadow-lg rounded-b-lg bg-main-white md:hidden ${
-                      !toggleMenu && "hidden"
+                      !toggleMenu && 'hidden'
                     }`}
       >
         {navLinkText.map(({ to, text }, index) => (
@@ -65,7 +65,7 @@ export default function Navbar() {
               to={to}
               onClick={() => setToggleMenu(false)}
               className={`transition text-md font-medium  ${
-                text === "Donate" ? "donate-btn" : "hover:text-main-blue"
+                text === 'Donate' ? 'btn-main' : 'hover:text-main-blue'
               }`}
             >
               {text}
@@ -81,7 +81,7 @@ export default function Navbar() {
             <NavLink
               to={to}
               className={`transition text-xl font-medium ${
-                text === "Donate" ? "donate-btn" : "hover:text-main-blue"
+                text === 'Donate' ? 'btn-main' : 'hover:text-main-blue'
               }`}
             >
               {text}
