@@ -1,11 +1,7 @@
 import { Link } from 'react-router-dom';
-import logo from '../assets/final-multi.jpg';
 import { Envelope, Phone } from '@phosphor-icons/react';
 
-interface navText {
-  to: string;
-  text: string;
-}
+import logo from '../assets/final-multi.jpg';
 
 const footerLinks = [
   {
@@ -40,44 +36,13 @@ const footerLinks = [
   },
 ];
 
-const companyLinks: navText[] = [
-  {
-    to: '/about-us',
-    text: 'About Us',
-  },
-  {
-    to: '/events',
-    text: 'Events',
-  },
-  {
-    to: '/gallery',
-    text: 'Gallery',
-  },
-];
-
-const getInvolvedLinks: navText[] = [
-  {
-    to: '/become-a-supporter',
-    text: 'Become a Supporter',
-  },
-  {
-    to: '/donate',
-    text: 'Donate',
-  },
-];
-
-const contactInformation: string[] = [
-  '702-608-7178',
-  'info@lasvegask9foundation.org',
-];
-
 export default function Footer() {
   return (
     <footer className="w-full mt-8 mb-2 px-2">
       <div className="p-4 w-full flex flex-col bg-main-blue rounded-lg">
         <div className="mx-auto text-main-white sm:w-3/5">
           <div className="flex flex-col gap-8 lg:flex-row justify-between">
-            <div className="lg:w-1/2 flex flex-col gap-2">
+            <div className="lg:w-1/2 flex flex-col gap-8">
               <Link to="/">
                 <img
                   src={logo}
