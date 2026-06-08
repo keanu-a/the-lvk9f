@@ -36,7 +36,7 @@ export default function Navbar() {
   const [toggleMenu, setToggleMenu] = useState(false);
 
   return (
-    <nav className="flex justify-between items-center pr-4 sm:px-4 lg:px-12 border-b-4 border-main-blue relative">
+    <nav className="flex justify-between items-center pr-4 sm:px-4 lg:px-12 border-b-4 border-main-blue relative z-50">
       <NavLink to="/">
         <img
           src={logo}
