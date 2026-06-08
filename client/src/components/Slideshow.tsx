@@ -1,4 +1,6 @@
-import { useState, useEffect } from 'react';
+import useEmblaCarousel from 'embla-carousel-react';
+import Autoplay from 'embla-carousel-autoplay';
+import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 
 interface Image {
   image: string;
@@ -8,76 +10,62 @@ interface Image {
 interface SlideshowProps {
   imageNames: Image[];
   duration?: number;
-  buttonColor?: string | null;
+  children?: React.ReactNode;
 }
 
-// Default landscape type & 5 second changes
 export default function Slideshow({
   imageNames = [],
   duration = 8,
-  buttonColor = null,
+  children,
 }: SlideshowProps) {
-  const [slideIndex, setSlideIndex] = useState(0);
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
+    Autoplay({ delay: duration * 1000, stopOnInteraction: false }),
+  ]);
 
-  // Changes the slide after every 'duration' seconds, default 5 seconds
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      // Increment slideIndex, and loop back to 0 when it reaches the end
-      setSlideIndex((prevIndex) => (prevIndex + 1) % imageNames.length);
-    }, duration * 1000);
-
-    return () => clearTimeout(timer);
-  });
-
-  // Boolean function that checks if the slideIndex matches the input index
-  const isCurrentSlide = (index: number) => {
-    return index === slideIndex;
-  };
-
-  // Sets the slide to whichever index input
-  const goToSlide = (index: number) => {
-    setSlideIndex(index);
-  };
+  const goToPrev = () => emblaApi?.scrollPrev();
+  const goToNext = () => emblaApi?.scrollNext();
 
   return (
-    <div className="flex justify-center w-full">
-      {/* Slideshow images */}
-      <ul className="list-none p-0 w-full">
-        {imageNames.map(({ image, alt }, index) => (
-          <li key={index} className={`${!isCurrentSlide(index) && 'hidden'}`}>
-            <img src={image} alt={alt} className="w-full object-fill" />
-          </li>
-        ))}
-      </ul>
+    <div className="relative w-full h-full overflow-hidden">
+      <div className="w-full h-full" ref={emblaRef}>
+        <div className="flex h-full touch-pan-y">
+          {imageNames.map(({ image, alt }, index) => (
+            <div key={index} className="flex-[0_0_100%] min-w-0 h-full">
+              <img
+                src={image}
+                alt={alt}
+                className="w-full h-full object-cover block"
+                loading={index === 0 ? 'eager' : 'lazy'}
+                {...(index === 0 && { fetchpriority: 'high' })}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
 
-      {/* <ul className="flex list-none">
-        {imageNames.map(({ image, alt }, index) => (
-          <li
-            key={index}
-            className={`w-screen transition-transform ease-out -translate-x-[${
-              (index - slideIndex) * 100
-            }%]`}
-          >
-            <img src={image} alt={alt} className="w-full object-fill" />
-          </li>
-        ))}
-      </ul> */}
+      <div
+        className="absolute inset-0 z-10"
+        style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
+      />
 
-      {/* Slideshow buttons */}
-      <ul className="gap-4 flex absolute bottom-0 p-4">
-        {imageNames.map((_, index) => (
-          <li key={index}>
-            <button
-              className={`w-6 h-2 rounded-full ${
-                isCurrentSlide(index)
-                  ? 'opacity-1'
-                  : 'opacity-50 hover:bg-main-red'
-              } ${buttonColor}`}
-              onClick={() => goToSlide(index)}
-            ></button>
-          </li>
-        ))}
-      </ul>
+      <div className="absolute inset-0 flex items-center justify-center z-20">
+        {children}
+      </div>
+
+      <div className="absolute bottom-4 right-0 transform -translate-x-1/2 flex space-x-4 z-30">
+        <button
+          onClick={goToPrev}
+          className="bg-main-white/20 p-2 rounded-full hover:bg-main-white/50 transition-colors"
+        >
+          <CaretLeft size={12} color="white" />
+        </button>
+        <button
+          onClick={goToNext}
+          className="bg-main-white/20 p-2 rounded-full hover:bg-main-white/50 transition-colors"
+        >
+          <CaretRight size={12} color="white" />
+        </button>
+      </div>
     </div>
   );
 }
