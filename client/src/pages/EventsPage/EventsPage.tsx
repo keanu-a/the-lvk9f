@@ -37,7 +37,11 @@ export default function EventsPage() {
   const [activeFilter, setActiveFilter] = useState<FilterTab>('all');
 
   const filteredEvents = events
-    .filter((event) => activeFilter === 'all' || event.type === activeFilter)
+    .filter(
+      (event) =>
+        (activeFilter === 'all' || event.type === activeFilter) &&
+        event.date >= new Date(),
+    )
     .sort((a, b) => a.date.getTime() - b.date.getTime());
 
   const filters: { label: string; value: FilterTab }[] = [
@@ -49,7 +53,7 @@ export default function EventsPage() {
   return (
     <Layout bannerText="Events">
       {/* Filter buttons */}
-      <div className="flex flex-wrap gap-2 p-2">
+      <div className="flex flex-wrap gap-2 py-2">
         {filters.map((filter) => (
           <button
             key={filter.value}
@@ -65,7 +69,7 @@ export default function EventsPage() {
         ))}
       </div>
 
-      <div className="w-screen flex justify-center">
+      <div className="w-full flex justify-center">
         {filteredEvents.length === 0 ? (
           <p className="text-center text-gray-500">More events coming soon!</p>
         ) : (
