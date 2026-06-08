@@ -43,26 +43,17 @@ const EVENTS: Event[] = [];
 export default function HomePage() {
   return (
     <>
-      <section
-        className="flex relative items-center aspect-[3/2] md:aspect-[5/2] overflow-hidden
-                  before:absolute before:inset-0 before:block before:bg-main-black before:bg-opacity-50"
-      >
-        <div className="flex flex-col text-main-white p-4 absolute text-center w-full">
-          <h1 className="text-2xl sm:text-6xl md:text-[4rem] lg:text-[6rem]">
-            The Las Vegas K-9 Foundation
-          </h1>
-          <div className="bg-main-white w-[16rem] h-[2px] mx-auto mt-2 md:w-[48rem] md:mt-8">
-            {' '}
+      <section className="flex relative aspect-[3/2] md:aspect-[5/2] overflow-hidden">
+        <Slideshow imageNames={SLIDESHOW_IMAGE_FILES}>
+          <div className="flex flex-col text-main-white p-4 text-center">
+            <h1 className="text-2xl leading-tight sm:text-6xl md:text-[4rem] lg:text-[6rem]">
+              The Las Vegas K-9 Foundation
+            </h1>
+            <h3 className="mt-1 text-xs sm:text-base md:text-2xl md:mt-4">
+              Building a Stronger Community, One Paw at a Time!
+            </h3>
           </div>
-          <h3 className="mt-1 text-xs sm:text-base md:text-2xl md:mt-4">
-            Building a Stronger Community, One Paw at a Time!
-          </h3>
-        </div>
-
-        <Slideshow
-          imageNames={SLIDESHOW_IMAGE_FILES}
-          buttonColor={'bg-main-white'}
-        />
+        </Slideshow>
       </section>
 
       <section className="min-h-[12rem] w-full p-4 flex items-center justify-center">
@@ -80,6 +71,7 @@ export default function HomePage() {
           src={awards}
           alt="Dog with a lot of awards"
           className="w-full object-cover h-1/2 sm:h-full sm:w-1/2"
+          loading="lazy"
         />
 
         <div className="flex flex-col gap-4 m-4 py-16 px-6 h-fit w-2/3 justify-center items-center bg-main-white shadow-shift-left-red rounded-lg overflow-hidden sm:m-0">
